@@ -27,10 +27,6 @@ Writer::Writer(std::wstring & fileName)
 void Writer::write(std::vector<sound>& toWrite) const
 {
 	ofstream output;
-	const char riff[4] = { 'R', 'I', 'F', 'F' };
-	const char wave[4] = { 'W', 'A', 'V', 'E' };
-	const char fmt[4] = { 'F', 'M', 'T', ' ' };
-	const char data[4] = { 'd', 'a', 't', 'a' };
 	uint32_t chunkSize, subChunk2Size, subChunk1Size;
 	const uint16_t channelNum = 1, formatType = 1;
 	const uint32_t sampleRate = 44100;
